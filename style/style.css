@@ -95,3 +95,23 @@ link-bar a {
     background-color: #e8ae80;
     clear: both;
 }
+
+#postDiv div {
+    overflow: auto;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    border-top: 3px dashed gainsboro;
+    border-bottom: 3px dashed gainsboro;
+}
+
+#postDiv div:first-child {
+    border-top: none;
+}
+
+#postDiv img {
+    float: left;
+    margin-right: 5%;
+}
