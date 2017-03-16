@@ -1,0 +1,10 @@
+body {
+    font-family: sans-serif;
+}
+
+link-bar a {
+    float: left;
+    margin-right: 1%;
+    font-size: .8em;
+    color: dimgray;
+}
