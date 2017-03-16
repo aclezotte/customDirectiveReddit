@@ -1,10 +1,44 @@
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
 body {
     font-family: sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 link-bar a {
     float: left;
-    margin-right: 1%;
+    margin: 0.5%;
     font-size: .8em;
-    color: dimgray;
+    opacity: 0.5;
+}
+
+#headerContainer {
+    clear: both;
+    position: relative;
+    overflow: auto;
+}
+
+#animalHeader {
+    width: 100%;
+    margin: 0;
+}
+
+#subLogo {
+    width: 20%;
+    position: absolute;
+    top: 0px;
+    left: 40%;
+    margin: auto;
+}
+
+#tabBar {
+    background-color: #a7dbd8;
+    padding: 0.5% 3%;
+}
+
+#tabBar a {
+    margin-right: 3%;
+    color: white;
+    font-weight: bold;
 }
