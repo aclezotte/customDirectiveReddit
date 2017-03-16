@@ -1,7 +1,6 @@
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 body {
-    font-family: sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -41,4 +40,58 @@ link-bar a {
     margin-right: 3%;
     color: white;
     font-weight: bold;
+}
+
+.container {
+    width: 100%;
+    min-height: 100%; height: 100%
+}
+
+#postDiv {
+    min-height: 100%; height: 100%
+}
+
+#sideBar {
+    text-align: center;
+    padding: 0 2%;
+    min-height: 100%; height: 100%;
+    border-left: 2px solid gainsboro;
+    border-right: 2px solid gainsboro;
+}
+
+#subName {
+    font-family: 'Baloo Bhaina', cursive;
+    font-size: 3em;
+    margin: 3% 0;
+}
+
+#sideBar a {
+    display: block;
+    color: white;
+    border-radius: 3px;
+    padding: 1%;
+}
+
+#submitBtn {
+    background-color: #8ac3c1;
+    margin-bottom: 2%;
+}
+
+#rulesBtn {
+    background-color: #c3c3b3;
+    float: left;
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+#reddit101Btn {
+    background-color: #c3c3b3;
+    float: right;
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+#msgBtn {
+    background-color: #e8ae80;
+    clear: both;
 }

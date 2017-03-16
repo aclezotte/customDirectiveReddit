@@ -1,6 +1,6 @@
 var app = angular.module("customReddit", []);
 
-app.controller("redditCtrl", function($scope){
+app.controller("redditCtrl", ["$scope", "$http", "redditFactory", function($scope, $http, redditFactory){
     
     $scope.links = [
         "MY SUBREDDITS",
@@ -25,7 +25,27 @@ app.controller("redditCtrl", function($scope){
         "wiki"
     ];
     
-});
+    $scope.jsonObject = {};
+    
+    var promise = $http({
+            method: "GET",
+            url: "https://www.reddit.com/r/aww.json"
+        }).then(function successCallback(response) {
+            $scope.jsonObject = response;
+            console.log($scope.jsonObject);
+        });
+    
+    return promise;
+    
+    $scope.posts = $scope.jsonObject.data.data.children;
+    console.log($scope.posts);
+    
+    // redditFactory.getReddit();
+    
+    // $scope.jsonInfo = redditFactory.returnReddit();
+    // console.log($scope.jsonInfo);
+    
+}]);
 
 app.directive("linkBar", function(){
     
@@ -52,6 +72,16 @@ app.directive("tabBar", function() {
     return {
         restrict: "E",
         templateUrl: "tabs.html",
+        replace: false
+    };
+    
+});
+
+app.directive("sideBar", function() {
+    
+    return {
+        restrict: "E",
+        templateUrl: "sidebar.html",
         replace: false
     };
     

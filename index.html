@@ -1,6 +1,9 @@
 <!DOCTYPE>
 <html>
     <head>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
         <link href="style/style.css" rel="stylesheet" type="text/css">
         <title>Reddit with Custom Directives</title>
     </head>
@@ -8,7 +11,16 @@
         <link-bar></link-bar>
         <animal-header></animal-header>
         <tab-bar></tab-bar>
+        <div class="container grid--borderBetween">
+            <div class="col-xs-9" id="postDiv">
+                
+            </div>
+            <div class="col-xs-3" id="sideBar">
+                <side-bar></side-bar>
+            </div>
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
         <script src="script/script.js"></script>
+        <script src="factory.js"></script>
     </body>
 </html>
