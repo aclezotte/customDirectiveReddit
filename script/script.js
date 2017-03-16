@@ -73,7 +73,7 @@ app.directive("linkBar", function(){
     
     return {
         restrict: "E",
-        templateUrl: "links.html",
+        templateUrl: "view/links.html",
         replace: false
     };
     
@@ -83,7 +83,7 @@ app.directive("animalHeader", function(){
     
     return {
         restrict: "E",
-        templateUrl: "header.html",
+        templateUrl: "view/header.html",
         replace: false
     };
 
@@ -93,7 +93,7 @@ app.directive("tabBar", function() {
     
     return {
         restrict: "E",
-        templateUrl: "tabs.html",
+        templateUrl: "view/vtabs.html",
         replace: false
     };
     
@@ -103,7 +103,7 @@ app.directive("sideBar", function() {
     
     return {
         restrict: "E",
-        templateUrl: "sidebar.html",
+        templateUrl: "iew/sidebar.html",
         replace: false
     };
     
@@ -113,7 +113,7 @@ app.directive("redditPosts", function() {
     
     return {
         restrict: "E",
-        templateUrl: "posts.html",
+        templateUrl: "view/posts.html",
         replace: false
     };
     
