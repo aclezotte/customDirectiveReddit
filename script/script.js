@@ -36,7 +36,7 @@ app.controller("redditCtrl", ["$scope", "$http", function($scope, $http){
         }    
     ];
     
-     $scope.jsonObject = [];
+    $scope.jsonObject = [];
     
     $scope.subTab = "";
     

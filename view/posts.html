@@ -1,5 +1,5 @@
-<div ng-repeat="post in jsonObject" ng-class="{firstPost:$first, noSticky:noSticky}">
-    <a href="{{post.data.url}}"><img src="{{post.data.thumbnail}}"></a>
+<div ng-repeat="post in jsonObject" ng-class="{sticky: post.data.stickied}">
+    <p class="score">{{post.data.score}}</p><a href="{{post.data.url}}"><img src="{{post.data.thumbnail}}"></a>
     <a href="{{post.data.url}}"><h4 class="title">{{post.data.title}}<span class="domain">({{post.data.domain}})</span></h4></a>
     <br>
     <p class="smallGray">submitted by <a href="https://www.reddit.com/u/{{post.data.author}}">{{post.data.author}}</a></p>

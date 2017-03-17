@@ -113,8 +113,21 @@ link-bar a {
     border-top: none;
 }
 
+/*
 .firstPost .title{
     color: green;
+}
+*/
+
+.score {
+    float: left;
+    color: darkgray;
+    margin-top: 3%;
+    margin-left: -3%;
+    margin-right: 2%;
+    text-align: center;
+    width: 5%;
+    font-weight: bold;
 }
 
 #postDiv img {
@@ -128,6 +141,10 @@ link-bar a {
     margin-bottom: -1.5%;
     padding: 0;
     color: blue;
+}
+
+.sticky .title {
+    color: green;
 }
 
 .domain {
@@ -145,8 +162,4 @@ link-bar a {
 
 .links {
     font-weight: bold;
-}
-
-.noSticky .title{
-    color: blue;
 }
