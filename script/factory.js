@@ -6,7 +6,7 @@ app.factory("redditFactory", function($http){
     
     return {
         
-        getReddit: function(subreddit) {
+        getReddit: function() {
             var promise = $http({
                 method: "GET",
                 url: "https://www.reddit.com/r/aww.json"
@@ -17,7 +17,8 @@ app.factory("redditFactory", function($http){
 
             return promise;
         },
-        returnReddit: function() {    //return the object to the controller
+        returnReddit: function() {
+            console.log(jsonObject);
             return jsonObject;
         }
         

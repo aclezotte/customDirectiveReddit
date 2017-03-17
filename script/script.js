@@ -15,16 +15,6 @@ app.controller("redditCtrl", ["$scope", "$http", function($scope, $http){
         "EDIT"
     ];
     
-    $scope.tabs = [
-        "hot",
-        "new",
-        "rising",
-        "controversial",
-        "top",
-        "gilded",
-        "wiki"
-    ];
-    
     $scope.posts = [
         {
             title: "Very proud mama",
@@ -43,29 +33,35 @@ app.controller("redditCtrl", ["$scope", "$http", function($scope, $http){
             thumb: "https://b.thumbs.redditmedia.com/kU9afVoh3OFZeAbcKGS9FHexvoivVdjpZ30O5scYc5c.jpg",
             link: "https://www.reddit.com/r/aww/comments/5znxw2/i_got_it_i_got_itflooop/"
             
-        }
-        
+        }    
     ];
     
-    // $scope.jsonObject = {};
+     $scope.jsonObject = [];
     
-    // var promise = $http({
-    //         method: "GET",
-    //         url: "https://www.reddit.com/r/aww.json"
-    //     }).then(function successCallback(response) {
-    //         $scope.jsonObject = response;
-    //         console.log($scope.jsonObject);
-    //     });
+    $scope.subTab = "";
     
-    // return promise;
+    $scope.noSticky = false;
     
-    // $scope.posts = $scope.jsonObject.data.data.children;
-    // console.log($scope.posts);
+    $scope.setTab = function(tab, hot){
+        $scope.subTab = tab;
+        if(hot){
+            $scope.noSticky = false;
+        }else{
+            $scope.noSticky = true;
+        }
+        $scope.getReddit();
+    };
     
-    // redditFactory.getReddit();
-    
-    // $scope.jsonInfo = redditFactory.returnReddit();
-    // console.log($scope.jsonInfo);
+     $scope.getReddit = function(){
+         $http({
+             method: "GET",
+             url: "https://www.reddit.com/r/aww" + $scope.subTab + ".json"
+         }).then(function successCallback(response) {
+             $scope.jsonObject = response.data.data.children;
+         });
+     }
+     
+     $scope.getReddit();
     
 }]);
 
@@ -93,7 +89,7 @@ app.directive("tabBar", function() {
     
     return {
         restrict: "E",
-        templateUrl: "view/vtabs.html",
+        templateUrl: "view/tabs.html",
         replace: false
     };
     
@@ -103,7 +99,7 @@ app.directive("sideBar", function() {
     
     return {
         restrict: "E",
-        templateUrl: "iew/sidebar.html",
+        templateUrl: "view/sidebar.html",
         replace: false
     };
     

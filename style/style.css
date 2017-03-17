@@ -9,7 +9,7 @@ body {
 
 link-bar a {
     float: left;
-    margin: 0.5%;
+    margin: 0.1%;
     font-size: .8em;
     opacity: 0.5;
 }
@@ -35,7 +35,7 @@ link-bar a {
 
 #tabBar {
     background-color: #a7dbd8;
-    padding: 0.5% 3%;
+    padding: 0.2% 3%;
 }
 
 #tabBar a {
@@ -113,7 +113,40 @@ link-bar a {
     border-top: none;
 }
 
+.firstPost .title{
+    color: green;
+}
+
 #postDiv img {
     float: left;
-    margin-right: 5%;
+    margin-right: 2%;
+    width: 10%;
+}
+
+.title {
+    margin: 0;
+    margin-bottom: -1.5%;
+    padding: 0;
+    color: blue;
+}
+
+.domain {
+    font-size: 0.6em;
+    margin-left: 0.5%;
+    color: gray;
+}
+
+.smallGray {
+    color: gray;
+    font-size: 0.8em;
+    margin: 0.5%;
+    padding: 0;
+}
+
+.links {
+    font-weight: bold;
+}
+
+.noSticky .title{
+    color: blue;
 }

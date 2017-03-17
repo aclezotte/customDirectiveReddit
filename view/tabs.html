@@ -1,3 +1,10 @@
 <div id="tabBar">
-    <a ng-repeat="tab in tabs">{{tab}}</a>
+    <a ng-click="setTab('', true)">hot</a>
+    <a ng-click="setTab('/new', false)">new</a>
+    <a ng-click="setTab('/rising', false)">rising</a>
+    <a ng-click="setTab('/controversial', false)">controversial</a>
+    <a ng-click="setTab('/top', false)">top</a>
+    <a ng-click="setTab('/gilded', false)">gilded</a>
+    <a ng-click="setTab('/wiki', false)">new</a>
+    <a ng-click="setTab('/ads', false)">promoted</a>
 </div>
